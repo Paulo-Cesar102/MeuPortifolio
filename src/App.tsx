@@ -10,7 +10,7 @@ function App() {
        Isso faz com que o link 'paulo-cesar102.github.io/MeuPortfolio/' 
        seja entendido como a página Home.
     */
-    <BrowserRouter basename="/MeuPortifolio">
+    <BrowserRouter basename="/MeuPortifolio/">
 
       <Routes>
         <Route path="/" element={<Home />} />
