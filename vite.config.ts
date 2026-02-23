@@ -1,18 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ command }) => {
-  return {
-    base: command === 'build' ? '/MeuPortifolio/' : '/',
-    build: {
-      outDir: 'docs',
-    },
-    plugins: [
-      react({
-        babel: {
-          plugins: [['babel-plugin-react-compiler']],
-        },
-      }),
-    ],
-  }
+export default defineConfig({
+  // Se estivermos no GitHub Pages, usamos o nome do repo, senão usamos a raiz
+  base: process.env.NODE_ENV === 'production' ? '/MeuPortifolio/' : '/',
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
+  plugins: [
+    react({
+      babel: {
+        plugins: [['babel-plugin-react-compiler']],
+      },
+    }),
+  ],
 })

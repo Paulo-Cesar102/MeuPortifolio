@@ -11,13 +11,13 @@ export default function Hero() {
 
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 1.6 }}
       >
         
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.9 }}
         >
           Paulo César
         </motion.h1>
@@ -25,7 +25,7 @@ export default function Hero() {
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.8 }}
         >
           Desenvolvedor Frontend React
         </motion.h2>
@@ -33,7 +33,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.8 }}
         >
           Construindo aplicações modernas com foco em performance,
           organização e experiência do usuário.
@@ -43,7 +43,7 @@ export default function Hero() {
           className={styles.buttons}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.9 }}
         >
           {/* BOTÃO PRINCIPAL */}
           <motion.a
@@ -51,7 +51,7 @@ export default function Hero() {
             className={styles.primary}
 
             whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 1.95 }}
           >
             Ver Projetos
           </motion.a>
@@ -63,7 +63,7 @@ export default function Hero() {
             className={styles.secondary}
 
             whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 1.95 }}
           >
             GitHub
           </motion.a>
