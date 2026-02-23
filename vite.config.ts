@@ -4,7 +4,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => {
   return {
     base: command === 'build' ? '/Meu-Portfolio/' : '/',
-
+    build: {
+      outDir: 'docs',
+    },
     plugins: [
       react({
         babel: {
