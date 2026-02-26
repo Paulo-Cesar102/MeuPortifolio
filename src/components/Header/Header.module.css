@@ -44,9 +44,9 @@
   opacity: 0.7;
 }
 .scrolled {
-  background-color: rgba(15,23,42,0.85);
+  background-color: rgba(44, 179, 233, 0.85);
   backdrop-filter: blur(10px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 20px rgba(32, 32, 32, 0.3);
 }
 
 /* 📱 Mobile */

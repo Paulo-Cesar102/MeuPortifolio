@@ -7,7 +7,7 @@
 
   background: linear-gradient(
     180deg,
-    #0f172a,
+    #0f202a,
     #020617
   );
 
@@ -45,7 +45,7 @@ p {
 
 .primary {
   background: #38bdf8;
-  color: black;
+  color: rgb(0, 0, 0);
   padding: 12px 20px;
   border-radius: 8px;
   text-decoration: none;

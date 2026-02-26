@@ -58,7 +58,7 @@ export default function Hero() {
 
           {/* BOTÃO SECUNDÁRIO */}
           <motion.a
-            href="https://github.com/"
+            href="https://github.com/Paulo-Cesar102"
             target="_blank"
             className={styles.secondary}
 
