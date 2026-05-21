@@ -1,76 +1,181 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 0;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scrolled {
+  padding: 12px 0;
+  background: rgba(3, 3, 3, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-neon);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 16px 24px;
-  background-color:     #38bdf8;
-  color: white;
-
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border: #000000 1px solid;
- box-shadow: 2px 5px 5px black;
 }
 
 .logo {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.menuButton {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
+.logoPrefix {
+  color: var(--neon-cyan);
+  font-family: var(--font-mono);
+  opacity: 0.6;
+}
+
+.accent {
+  background: var(--gradient-cyber);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 4px;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
 }
 
 .navList {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   list-style: none;
 }
 
-.navList a {
-  color: white;
+.navLink {
   text-decoration: none;
-  transition: 0.2s;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.navList a:hover {
-  opacity: 0.7;
-}
-.scrolled {
-  background-color: rgba(44, 179, 233, 0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 6px 20px rgba(32, 32, 32, 0.3);
+.navNumber {
+  color: var(--neon-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
 }
 
-/* 📱 Mobile */
-@media (max-width: 768px) {
-  .menuButton {
-    display: block;
-  }
+.navLink:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
 
-  .nav {
-    position: absolute;
-    top: 64px;
-    right: 0;
-    background-color: #0f172a;
-    width: 100%;
+.cta {
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  font-family: var(--font-mono);
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.menuButton span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--neon-cyan);
+  transition: 0.3s;
+}
+
+.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(3, 3, 3, 0.98);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.mobileNavList {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0;
+}
+
+.mobileNavList a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 1024px) {
+  .desktopNav {
     display: none;
   }
-
-  .nav.active {
-    display: block;
+  
+  .menuButton {
+    display: flex;
   }
+}
 
-  .navList {
-    flex-direction: column;
-    padding: 16px;
-    gap: 16px;
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
   }
 }

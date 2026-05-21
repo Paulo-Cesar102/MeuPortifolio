@@ -1,0 +1,171 @@
+.projetosSection {
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  color: var(--neon-magenta);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.imageBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-neon);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 5, 5, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.iconBtn {
+  width: 50px;
+  height: 50px;
+  background: var(--neon-cyan);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.iconBtn:hover {
+  background: #fff;
+  box-shadow: 0 0 20px #fff;
+}
+
+.cardContent {
+  padding: 30px;
+}
+
+.category {
+  font-size: 0.7rem;
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cardContent h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.cardContent p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techTag {
+  font-size: 0.75rem;
+  color: var(--neon-magenta);
+  background: rgba(255, 0, 255, 0.05);
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 0, 255, 0.2);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.viewMore {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.githubBtn {
+  background: transparent;
+  color: #fff;
+  padding: 16px 40px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.githubBtn:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
