@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   // Se estivermos no GitHub Pages, usamos o nome do repo, senão usamos a raiz
-  base: process.env.NODE_ENV === 'production' ? '/MeuPortifolio/' : '/',
+  base: '/MeuPortifolio/',
   build: {
     outDir: 'docs',
     emptyOutDir: true,
