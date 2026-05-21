@@ -11,7 +11,7 @@ const skillsData = [
   {
     title: "Segurança de Elite",
     icon: <Shield size={30} />,
-    items: ["JWT / Auth", "Bcrypt / Argon2", "CORS / CSRF", "Zod Validation"]
+    items: ["JWT / Auth", "Bcrypt", "CORS / CSRF", "Zod Validation"]
   },
   {
     title: "Sistemas em Real-Time",
@@ -31,7 +31,7 @@ const skillsData = [
   {
     title: "Qualidade & Ops",
     icon: <Terminal size={30} />,
-    items: ["Jest / TDD", "Clean Architecture", "CI/CD", "Git Workflow"]
+    items: ["Git", "Clean Architecture", "REST API", "Docker"]
   }
 ];
 
