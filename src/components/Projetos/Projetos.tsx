@@ -127,7 +127,7 @@ export default function Projetos() {
                    <button className={styles.iconBtn} onClick={() => setSelectedProject(projeto)}>
                      <Play size={24} />
                    </button>
-                   <a href="#" className={styles.iconBtn}><GithubIcon size={24} /></a>
+                   <a href="https://github.com/Paulo-Cesar102/-FitnApp-Sistema-de-Treinos-e-academia" className={styles.iconBtn}><GithubIcon size={24} /></a>
                 </div>
               </div>
             </div>
